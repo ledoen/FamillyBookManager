@@ -1,0 +1,55 @@
+﻿<Window x:Class="FamillyBookManager.GUI.ModifyBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FamillyBookManager.GUI"
+        mc:Ignorable="d"
+        Title="修改书籍信息" Height="360" Width="720" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--添加标签-->
+            <Label Grid.Row="0" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="0,5,0,5">书名:</Label>
+            <Label Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="0,5,0,5">作者:</Label>
+            <Label Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="0,5,0,5">分类:</Label>
+            <Label Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="0,5,0,5">出版社:</Label>
+            <Label Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="0,5,0,5">分级:</Label>
+            <Label Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="0,5,0,5">位置:</Label>
+            <Label Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="10,5,0,5">阅读状态:</Label>
+            <Label Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontSize="16" Padding="0,0,10,0" Margin="10,5,0,5">保存状态:</Label>
+            <!--添加内容控件-->
+            <!--第二列-->
+            <TextBox Name="textBoxForName" Text="{Binding Path=BookName}" Grid.Row="0" Grid.Column="1" Margin="0,5,0,5" Padding="0,5,0,5" FontSize="16" TabIndex="1"></TextBox>
+            <ComboBox Name="comboBoxForType" Text="{Binding Path=BookType}" Grid.Row="1" Grid.Column="1" Margin="0,5,0,5" Padding="0,5,0,5" FontSize="16"></ComboBox>
+            <ComboBox Name="comboBoxForGrade" Text="{Binding Path=Grade}" Grid.Row="2" Grid.Column="1" Margin="0,5,0,5" Padding="0,5,0,5" FontSize="16"></ComboBox>
+            <ComboBox Name="comboBoxForReadingStatus" Text="{Binding Path=ReadingStatus}" Grid.Row="3" Grid.Column="1" Margin="0,5,0,5" Padding="0,5,0,5" FontSize="16"></ComboBox>
+            <!--第四列-->
+            <TextBox Name="textBoxForAuthor" Text="{Binding Path=Author}" Grid.Row="0" Grid.Column="3" Margin="0,5,10,5" Padding="0,5,0,5" FontSize="16" TabIndex="2"></TextBox>
+            <TextBox Name="textBoxForPublisher" Text="{Binding Path=Publisher}" Grid.Row="1" Grid.Column="3" Margin="0,5,10,5" Padding="0,5,0,5" FontSize="16" TabIndex="3"></TextBox>
+            <ComboBox Name="comboBoxForLocation" Text="{Binding Path=Location}" Grid.Row="2" Grid.Column="3" Margin="0,5,10,5" Padding="0,5,0,5" FontSize="16"></ComboBox>
+            <ComboBox Name="comboBoxForIsExist" Text="{Binding Path=IsExist}" Grid.Row="3" Grid.Column="3" Margin="0,5,10,5" Padding="0,5,0,5" FontSize="16"></ComboBox>
+            <!--描述输入框-->
+            <GroupBox Header="描述" FontSize="16" Grid.Row="4" Grid.ColumnSpan="4" Margin="5" Padding="5">
+                <TextBox Name="textBoxForDiscribe" Text="{Binding Path=Discribe}" FontSize="16" TabIndex="4"></TextBox>
+            </GroupBox>
+            <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Grid.ColumnSpan="4">
+                <Button Name="buttonForAdd" FontSize="16" Margin="0,0,50,0" Padding="20,5,20,5" Click="buttonForAdd_Click" Height="32" VerticalAlignment="Top">修改</Button>
+                <Button Name="buttonForClose" FontSize="16" Padding="10,5,10,5" Click="buttonForClose_Click" Height="32" VerticalAlignment="Bottom">关闭窗口</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
