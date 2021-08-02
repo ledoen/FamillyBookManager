@@ -15,6 +15,7 @@ namespace Model
             "软件",
             "心理学",
             "小说",
+            "文学",
             "管理",
             "科普",
             "儿童读物"
@@ -22,6 +23,7 @@ namespace Model
         public static string[] Grades = new string[]
         {
             "1",
+            "2",
             "3",
             "5"
         };

@@ -263,6 +263,16 @@ namespace FamillyBookManager.GUI
             //调用修改
             buttonForModify_Click(null,null);
         }
+        /// <summary>
+        /// 鼠标双击列表响应
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridForDisplay_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            //调用修改
+            buttonForModify_Click(null, null);
+        }
         #endregion
 
         #region 统计信息展示
@@ -348,6 +358,6 @@ namespace FamillyBookManager.GUI
                     break;
             }
         }
+        #endregion
     }
-    #endregion
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FamillyBookManager.GUI"
         mc:Ignorable="d"
-        Title="修改书籍信息" Height="360" Width="720" WindowStartupLocation="CenterScreen">
+        Title="修改书籍信息" Height="360" Width="720" WindowStartupLocation="CenterScreen" Icon="Images\books.ico">
     <Grid>
         <Grid Margin="5">
             <Grid.RowDefinitions>

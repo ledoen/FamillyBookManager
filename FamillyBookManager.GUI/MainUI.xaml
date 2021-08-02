@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FamillyBookManager.GUI"
         mc:Ignorable="d"
-        Title="家庭图书管理系统" Height="720" Width="1080" WindowStartupLocation="CenterScreen">
+        Title="家庭图书管理系统" Height="720" Width="1080" WindowStartupLocation="CenterScreen" Icon="Images\books.ico">
     <Window.Resources>
         <ContextMenu x:Key="dataGridContextMenu">
             <MenuItem Header="修改" Name="contextMenuModify" Click="contextMenuModify_Click"></MenuItem>
         </ContextMenu>
     </Window.Resources>
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
@@ -36,13 +36,13 @@
             <Label Padding="0,0,30,0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="Silver" Grid.Row="1" FontFamily="YouYuan" FontSize="36" FontWeight="Bold">行千里路</Label>
         </Grid>
         <!--0.1窗格放置菜单按钮-->
-        <Grid Grid.Row="0" Grid.Column="1" Background="SkyBlue" ShowGridLines="True">
+        <Grid Grid.Row="0" Grid.Column="1" Background="SkyBlue" ShowGridLines="False">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <!--0.1分为多行-->
-            <Grid Grid.Column="0" ShowGridLines="True">
+            <Grid Grid.Column="0" ShowGridLines="False">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
@@ -99,7 +99,7 @@
                 </StackPanel>
             </StatusBar>
         <DataGrid Name="dataGridForDisplay" ItemsSource="{Binding}" FontSize="16" AutoGenerateColumns="False"  AlternatingRowBackground="LightBlue" AlternationCount="2" 
-                      HorizontalGridLinesBrush="AliceBlue" VerticalGridLinesBrush="SkyBlue" MinColumnWidth="50" IsReadOnly="True" Background="SkyBlue" ContextMenu="{StaticResource dataGridContextMenu}">
+                      HorizontalGridLinesBrush="AliceBlue" VerticalGridLinesBrush="SkyBlue" MinColumnWidth="50" IsReadOnly="True" Background="SkyBlue" ContextMenu="{StaticResource dataGridContextMenu}" MouseDoubleClick="dataGridForDisplay_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="书号" Width="60" Binding="{Binding BookID}"></DataGridTextColumn>
                 <DataGridTextColumn Header="书名" Binding="{Binding BookName}"></DataGridTextColumn>

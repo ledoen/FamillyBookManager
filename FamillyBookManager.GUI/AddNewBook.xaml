@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FamillyBookManager.GUI"
         mc:Ignorable="d"
-        Title="添加书籍" Height="360" Width="720" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+        Title="添加书籍" Height="360" Width="720" WindowStartupLocation="CenterScreen" Closed="Window_Closed" Icon="Images\books.ico">
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
